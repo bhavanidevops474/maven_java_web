@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                mvnw -B -DskipTests clean package 
+                mvn clean package
             }
         }
         
