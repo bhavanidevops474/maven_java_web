@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                mvn clean test
+                "mvn clean test"
             }
         }
         
