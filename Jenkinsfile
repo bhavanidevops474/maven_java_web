@@ -1,19 +1,10 @@
-pipeline{
-  agent any
-  stages{
-    stage("Bulid"){
-      steps{
-          echo 'building the project'
+pipeline {
+    agent any
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'mvn -B -DskipTests clean package' 
+            }
+        }
     }
-     stage("test"){
-       steps{
-          echo 'testing the project '
-       }
-    }
-     stage("deploy"){
-       steps{
-          echo 'deploying the project '
-       }
-    }
-  }
 }
